@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix my_ns: <http://inf558.org/myfakenamespace#> .
+
+
+#### Movie Class ####
+my_ns:Movie a schema:Class ;
+    rdfs:subClassOf schema:Movie ;
+    schema:name schema:text ;        # movie name
+    schema:datePublished xsd:gYear ; # year of release
+    schema:director schema:Person ;  # movie directors
+    schema:author schema:Person ;    # movie writers
+    schema:actor schema:Person ;     # movie actors
